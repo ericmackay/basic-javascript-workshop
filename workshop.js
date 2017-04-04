@@ -101,8 +101,9 @@ function longestWord(inputString) {
 }   
     
 function capitalize(inputString) {
-
-}
+    if (inputString) 
+        return inputString.toUpperCase();
+    }
 
 function sumOfNumbers(arrayOfNumbers) {
 
