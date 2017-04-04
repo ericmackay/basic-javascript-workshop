@@ -106,13 +106,39 @@ function capitalize(inputString) {
     }
 
 function sumOfNumbers(arrayOfNumbers) {
-
+    if (typeof arrayOfNumbers !== "object") {
+        return
+    }
+    var total = 0;
+    for (var i = 0; i < arrayOfNumbers.length; i++){
+        if(typeof arrayOfNumbers[i] !== "number") {
+            return
+        }
+        total += arrayOfNumbers[i];
+    }
+    return total; 
 }
 
 function uniqueElements(array1, array2) {
-
+    var arrayTemp = [];
+   
+   if (typeof array1 != "object" && typeof array2 != "object") {
+       return;
+   }
+   
+   for (var i = 0; i < array1.length; i++) {
+       if (array2.indexOf(array1[i]) < 0) {
+           arrayTemp.push(array1[i])
+       }
+   }
+   
+   for (var j = 0; j < array2.length; j++) {
+       if (array1.indexOf(array2[j]) < 0) {
+           arrayTemp.push(array2[j])
+       }
+   }
+   return arrayTemp;
 }
-
 function isPalindrome(inputString) {
 
 }
