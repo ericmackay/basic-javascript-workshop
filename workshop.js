@@ -77,6 +77,11 @@ function repeatString(inputString, numRepetitions) {
 
 function reverseString(inputString) {
 
+    var splitString = inputString.split('');
+    var reverseArray = splitString.reverse();
+    var joinArray = reverseArray.join('');
+    return joinArray;
+    
 }
 
 function longestWord(inputString) {
