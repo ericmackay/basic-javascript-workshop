@@ -140,9 +140,17 @@ function uniqueElements(array1, array2) {
    return arrayTemp;
 }
 function isPalindrome(inputString) {
+    
+inputString = inputString.replace(/[^a-zA-Z ]/g, "").split(" ").join("").toLowerCase()
 
+   var stringLength  = inputString.length;
+   for (var i = 0; i < stringLength / 2; i++) {
+       if (inputString.charAt(i) !== inputString.charAt(stringLength - 1 - i)) {
+           return false;
+       }
+   }
+   return true;
 }
-
 function wrapCharacter(inputString) {
 
 }
