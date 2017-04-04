@@ -17,8 +17,11 @@ function lastLetter(inputString) {
 }
 
 function letterAtPosition(inputString, position) {
-
+    if (inputString) {
+        return inputString[position];
+    }
 }
+    
 
 function addTwoNumbers(num1, num2) {
 
